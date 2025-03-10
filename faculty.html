@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafePass - Faculty Dashboard</title>
+    <link href="faculty.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>SafePass</h2>
+                <p>College Movement Management</p>
+            </div>
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3 class="user-name">Dr. Sarah Johnson</h3>
+                <p class="user-role">Associate Professor</p>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <!-- Changed "Leave Requests" to "Approved Today" -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-check-circle"></i> Approved Today
+                    </a>
+                </li>
+                <!-- Changed "Notifications" to "Rejected Today" -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-times-circle"></i> Rejected Today
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user-cog"></i> Profile Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="student.html" class="nav-link">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="nav-actions">
+                    <div class="action-item">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="action-item">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">5</span>
+                    </div>
+                    <div class="action-item">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <h1 class="page-title">Faculty Dashboard</h1>
+
+                <!-- Stats Container -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon class-bg">
+                            <i class="fas fa-chalkboard"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>5</h3>
+                            <p>Classes Today</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon student-bg">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>125</h3>
+                            <p>Total Students</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon leave-bg">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>8</h3>
+                            <p>Pending Leave Requests</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <!-- Pending Approvals Table -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Pending Approvals</h3>
+                            <button class="action-btn btn-view">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Student</th>
+                                        <th>Type</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John Smith</td>
+                                        <td>Leave Request</td>
+                                        <td>Mar 2, 2025</td>
+                                        <td><span class="badge badge-pending">Pending</span></td>
+                                        <td>
+                                            <button class="action-btn btn-approve">Approve</button>
+                                            <button class="action-btn btn-reject">Reject</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emily Johnson</td>
+                                        <td>Leave Request</td>
+                                        <td>Mar 2, 2025</td>
+                                        <td><span class="badge badge-pending">Pending</span></td>
+                                        <td>
+                                            <button class="action-btn btn-approve">Approve</button>
+                                            <button class="action-btn btn-reject">Reject</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Brown</td>
+                                        <td>Leave Request</td>
+                                        <td>Mar 3, 2025</td>
+                                        <td><span class="badge badge-pending">Pending</span></td>
+                                        <td>
+                                            <button class="action-btn btn-approve">Approve</button>
+                                            <button class="action-btn btn-reject">Reject</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jessica Lee</td>
+                                        <td>Leave Request</td>
+                                        <td>Mar 3, 2025</td>
+                                        <td><span class="badge badge-pending">Pending</span></td>
+                                        <td>
+                                            <button class="action-btn btn-approve">Approve</button>
+                                            <button class="action-btn btn-reject">Reject</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>David Wilson</td>
+                                        <td>Leave Request</td>
+                                        <td>Mar 4, 2025</td>
+                                        <td><span class="badge badge-pending">Pending</span></td>
+                                        <td>
+                                            <button class="action-btn btn-approve">Approve</button>
+                                            <button class="action-btn btn-reject">Reject</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Only Calendar remains -->
+                    <div>
+                        <!-- Calendar Card -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Calendar</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="calendar">
+                                    <div class="calendar-header">
+                                        <button class="action-btn btn-view"><i class="fas fa-chevron-left"></i></button>
+                                        <h4>March 2025</h4>
+                                        <button class="action-btn btn-view"><i class="fas fa-chevron-right"></i></button>
+                                    </div>
+                                    <div class="day-label">Sun</div>
+                                    <div class="day-label">Mon</div>
+                                    <div class="day-label">Tue</div>
+                                    <div class="day-label">Wed</div>
+                                    <div class="day-label">Thu</div>
+                                    <div class="day-label">Fri</div>
+                                    <div class="day-label">Sat</div>
+
+                                    <div class="date">24</div>
+                                    <div class="date">25</div>
+                                    <div class="date">26</div>
+                                    <div class="date">27</div>
+                                    <div class="date">28</div>
+                                    <div class="date">1</div>
+                                    <div class="date">2</div>
+
+                                    <div class="date">3</div>
+                                    <div class="date active today">4</div>
+                                    <div class="date has-event">5</div>
+                                    <div class="date has-event">6</div>
+                                    <div class="date">7</div>
+                                    <div class="date">8</div>
+                                    <div class="date">9</div>
+
+                                    <div class="date">10</div>
+                                    <div class="date has-event">11</div>
+                                    <div class="date">12</div>
+                                    <div class="date">13</div>
+                                    <div class="date">14</div>
+                                    <div class="date has-event">15</div>
+                                    <div class="date">16</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src ="faculty.js"></script>
+</body>
+</html>
